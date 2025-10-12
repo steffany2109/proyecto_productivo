@@ -1,0 +1,617 @@
+/* ========= RESET ========= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 100px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* ========= NAVBAR ========= */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  background: #1a4d2e;
+  z-index: 1000;
+  height: 90px;
+}
+
+.navbar .logo img {
+  height: 80px;  /* Logo más grande */
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffdd57;
+}
+
+/* ========= HERO ========= */
+.hero {
+  position: relative;
+  background: url("../static/img/modasostenible.jpg") no-repeat center/cover;
+  color: white;
+  min-height: 600px;
+  padding: 20rem 2rem 4rem;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #ffdd57;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #f4f4f4;
+}
+
+/* ========= BOTONES HERO ========= */
+.hero-buttons {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* PRIMARIO (amarillo) */
+.btn-primary {
+  background: #ffdd57;
+  color: #1a1a1a;
+}
+
+.btn-primary:hover {
+  background: #ffc107;
+}
+
+
+/* SECUNDARIO (verde) */
+.btn-secondary {
+  background: #28a745;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #218838;
+}
+
+/* TERCIARIO (blanco sólido) */
+.btn-tertiary {
+  background: #ffffff;
+  color: #1a1a1a;           /* texto negro */
+  border: 2px solid #ffffff;
+}
+
+.btn-tertiary:hover {
+  background: #f4f4f4;      /* gris suave */
+  border-color: #ddd;
+  color: #000;
+}
+
+/* ========= PROPUESTA DE VALOR ========= */
+/* Sección Propuesta de Valor */
+.propuesta-valor {
+  padding: 60px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.propuesta-valor h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #14532d; /* Verde oscuro para el título */
+}
+
+.propuesta-valor ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Para que se acomode en pantallas pequeñas */
+}
+
+.propuesta-valor li {
+  background: #e8f8f0; /* Verde muy claro */
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.propuesta-valor li:hover {
+  transform: translateY(-5px);
+}
+
+/* Ajuste de imágenes */
+.propuesta-valor li img {
+  width: 70px;       /* Tamaño fijo pequeño */
+  height: 70px;      /* Cuadradas */
+  object-fit: cover; /* Ajusta bien la imagen */
+  margin-bottom: 15px;
+  border-radius: 50%; /* Para que se vean como iconos circulares */
+}
+
+
+/* ========= TIENDA DESTACADA ========= */
+.tienda {
+  padding: 4rem 2rem;
+  background: #f4f4f4;
+}
+
+.tienda h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1a4d2e;
+}
+
+.categorias {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.categorias button {
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 20px;
+  background: #ffdd57;
+  color: #1a1a1a;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.categorias button:hover {
+  background: #ffc107;
+}
+
+.productos-destacados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.productos-destacados .card {
+  background: white;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+
+.productos-destacados img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.pildoras {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.pildoras a {
+  margin: 0 1rem;
+  text-decoration: underline;
+  color: #28a745;
+  font-weight: 500;
+}
+/* Contenedor del botón de "Visitar tienda" */
+.ver-mas {
+  text-align: center;   /* Centrado en la sección */
+  margin: 90px 0;       /* Espaciado arriba y abajo */
+}
+
+/* Estilo del botón */
+.btn-tienda {
+  display: inline-block;
+  background-color: #fcd34d; /* Amarillo */
+  color: #000;              /* Texto negro */
+  padding: 15px 40px;       /* Más grande que los demás */
+  border-radius: 30px;      /* Bordes redondeados */
+  font-weight: bold;
+  font-size: 18px;          /* Un poco más grande */
+  text-decoration: none;    /* Quita subrayado */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Leve sombra */
+}
+
+/* Hover (cuando pasa el mouse) */
+.btn-tienda:hover {
+  background-color: #fbbf24; /* Amarillo un poco más oscuro */
+  transform: scale(1.05);    /* Ligero aumento */
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+
+/* ========= EDITORIAL ========= */
+.editorial {
+  background: #e8f5e9;
+  padding: 4rem 2rem;
+}
+
+.editorial h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1a4d2e;
+}
+
+.articulos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.articulos article {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.articulos img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.articulos h3 {
+  color: #ff5722;
+}
+
+/* ========= EQUIPO ========= */
+/* Sección del equipo */
+.equipo {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.equipo h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #1a3d2f;
+}
+
+.equipo p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Contenedor de las cards */
+.team-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Cada card */
+.team-cards .card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  width: 200px;             /* Fijamos ancho */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-cards .card:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagen de cada persona */
+.team-cards .card img {
+  width: 200px !important;     /* Fuerza a crecer */
+  height: 200px !important;
+  object-fit: cover;           /* Mantiene proporción recortada */
+  border-radius: 50%;          /* Redondas */
+  margin-bottom: 15px;
+  border: 4px solid #e8f5e9;   /* Borde opcional */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Nombre del rol */
+.team-cards .card p {
+  font-weight: bold;
+  color: #333;
+}
+.testimonios blockquote img {
+  width: 60px;           /* Íconos pequeños */
+  height: 60px;
+  object-fit: contain;   /* Ajusta sin recortar */
+  border-radius: 50%;    /* También redondos */
+  margin-bottom: 10px;
+}
+.team-cards .card img:hover {
+  transform: scale(1.08);        /* Zoom ligero */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25); /* Efecto elegante */
+}
+
+/* ========= VALORES ========= */
+.valores {
+  background: #fff3e0;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.testimonios {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+blockquote {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  max-width: 300px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  font-style: italic;
+  text-align: center;
+}
+
+blockquote img {
+  display: block;
+  margin: 0 auto 0.5rem;
+  border-radius: 50%;
+}
+/* ========= LOGOS / ICONOS PEQUEÑOS ========= */
+.testimonios blockquote img,
+.team-cards .card img {
+  width: 60px;           /* tamaño pequeño uniforme */
+  height: 60px;
+  object-fit: contain;   /* ajusta sin recortar */
+  border-radius: 50%;    /* circulares */
+  margin-bottom: 10px;
+}
+
+
+/* ========= FAQ ========= */
+.faq {
+  background-color: #f5f5f5;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #104d2c;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+}
+
+details {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+details:hover {
+  background: #f0f8f5;
+}
+
+summary {
+  font-weight: bold;
+  color: #333;
+  list-style: none;
+  position: relative;
+  padding-right: 25px;
+}
+
+summary::after {
+  content: "➤";
+  font-size: 14px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+  transform: rotate(270deg);
+}
+
+details p {
+  margin-top: 10px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ========= NEWSLETTER ========= */
+.newsletter {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #28a745;
+  color: white;
+}
+
+.newsletter input {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 25px;
+  width: 250px;
+  margin-right: 0.5rem;
+}
+
+.newsletter button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  background: #ffdd57;
+  color: #1a1a1a;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background: #ffc107;
+}
+
+/* ========= FOOTER ========= */
+footer {
+  padding: 2rem;
+  background: #1a4d2e;
+  color: white;
+  text-align: center;
+}
+
+.footer-links, .redes {
+  margin: 1rem 0;
+}
+
+.footer-links a, .redes a {
+  margin: 0 1rem;
+  color: #ffdd57;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover, .redes a:hover {
+  color: #ffc107;
+}
+
+.redes img {
+  vertical-align: middle;
+}
+
+/* ========= CARRITO ========= */
+.cart-icon {
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+#cart-count {
+  background: #ffdd57;
+  color: #1a1a1a;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 0.9rem;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+}
+
+/* Panel lateral del carrito */
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 350px;
+  height: 100%;
+  background: white;
+  box-shadow: -4px 0 8px rgba(0,0,0,0.2);
+  padding: 1rem;
+  transition: right 0.3s ease;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+}
+
+.cart-panel.open {
+  right: 0;
+  color: #000;
+}
+
+.cart-panel h3 {
+  color: #1a4d2e;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.cart-panel ul {
+  flex-grow: 1;
+  color: #000;
+  list-style: none;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.cart-panel li {
+  color:#000;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+#clear-cart {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#clear-cart:hover {
+  background: #218838;
+}

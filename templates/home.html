@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OWNSTYLE - Moda Sostenible</title>
+  <link rel="stylesheet" href="../static/styles.css">
+  <script src="../static/cart.js"></script>
+
+</head>
+<body>
+  <!-- HEADER / HERO -->
+ <header class="hero">
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../static/img/logo.png" alt="Logo OWNSTYLE">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#tienda">Tienda</a></li>
+      <li><a href="#impacto">Impacto</a></li>
+      <li><a href="#editorial">Editorial</a></li>
+      <li><a href="#equipo">Equipo</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+
+    <div class="cart-icon" id="cart-icon">
+  🛒 <span id="cart-count">0</span>
+</div>
+
+<!-- Panel lateral del carrito -->
+<div id="cart-panel" class="cart-panel">
+  <h3>🛍️ Tu Carrito</h3>
+  <ul id="cart-items"></ul>
+  <p style="color:black;">Total: $<span id="cart-total" style="color:black;">0</span></p>
+  <button id="clear-cart">Vaciar carrito</button>
+</div>
+
+  </nav>
+
+  <div class="hero-content">
+    <h1>Viste con propósito, apoya lo local</h1>
+    <p>Moda sostenible, auténtica y consciente desde Bogotá para el mundo.</p>
+  </div>
+
+  <!-- Botones posicionados sobre la imagen -->
+  <div class="hero-buttons">
+    <a href="#tienda" class="btn btn-primary">Explorar tienda</a>
+    <a href="#editorial" class="btn btn-secondary">Conoce nuestro impacto</a>
+
+    <a href="#equipo" class="btn btn-tertiary">Conoce nuestro equipo</a>
+  </div>
+</header>
+
+
+  <!-- PROPUESTA DE VALOR -->
+  <section class="propuesta-valor">
+    <div class="container">
+      <h2>Nuestra propuesta de valor</h2>
+      <ul>
+        <li>
+          <img src="../static/img/modasostenible.jpg" alt="Confianza">
+          Compra con seguridad y transparencia.
+        </li>
+        <li>
+          <img src="../static/img/emprendedores.jpg" alt="Emprendedores">
+          Apoya a emprendedores locales.
+        </li>
+        <li>
+          <img src="../static/img/planeta.jpg" alt="Planeta">
+          Elige moda que respete al planeta.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TIENDA DESTACADA -->
+  <section id="tienda" class="tienda">
+    <h2>Categorías destacadas para ti</h2>
+    <div class="categorias">
+      <button onclick="cargarProductos('')">Todos</button>
+      <button onclick="cargarProductos('M')">Mujer</button>
+      <button onclick="cargarProductos('H')">Hombre</button>
+      <button>Niños/Niñas</button>
+      <button>Joyería</button>
+      <button>Accesorios</button>
+    </div>
+    <div id="ProductosTienda" class="productos-destacados">
+      
+  
+    </div>
+<div>
+    <div class="ver-mas">
+        <a href="tienda.html" class="btn btn-tienda">🛍️ Visitar la tienda</a>
+    </div>
+    <div class="pildoras">
+      <a href="#">Guía de tallas inclusivas</a>
+      <a href="#">Cómo identificar productos sostenibles</a>
+      <a href="#">Tips para cuidar tu prenda</a>
+    </div>
+  </section>
+
+  <!-- BLOQUE EDITORIAL -->
+  <section id="editorial" class="editorial">
+    <h2>Historias y consejos de sostenibilidad</h2>
+    <div class="articulos">
+      <article>
+        <img src="../static/img/modasostenible1.jpg" alt="Moda sostenible">
+        <h3>La moda que cuida el planeta</h3>
+        <p>Cómo la sostenibilidad redefine el estilo.</p>
+      </article>
+      <article>
+        <img src="../static/img/emprendedoreslocales.jpg" alt="Emprendedores locales">
+        <h3>Historias de emprendedores locales</h3>
+        <p>Conoce quién está detrás de cada prenda.</p>
+      </article>
+      <article>
+        <img src="../static/img/collares.jpg" alt="Accesorios con propósito">
+        <h3>Accesorios con propósito</h3>
+        <p>Más allá de la moda, un impacto positivo.</p>
+      </article>
+    </div>
+    <a href="#">Ver todos los artículos</a>
+  </section>
+
+  <!-- EQUIPO -->
+  <section id="equipo" class="equipo">
+    <h2>Quienes hacemos posible OWNSTYLE</h2>
+    <p>Somos un equipo que cree en la moda sostenible, la diversidad y la confianza como base del consumo consciente.</p>
+    <div class="team-cards">
+      <div class="card">
+        <img src='../static/img/foto1.jpg' alt="Dirección">
+        <p>Dirección</p>
+      </div>
+      <div class="card">
+        <img src="../static/img/foto1.jpg" alt="Contenido">
+        <p>Contenido</p>
+      </div>
+      <div class="card">
+        <img src="../static/img/foto1.jpg" alt="Diseño">
+        <p>Diseño</p>
+      </div>
+      <div class="card">
+        <img src="../static/img/foto1.jpg" alt="Tecnología">
+        <p>Tecnología</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALORES Y TESTIMONIOS -->
+  <section class="valores">
+    <h2>Lo que nos mueve</h2>
+    <p>Comprometidos con sostenibilidad, confianza, comercio justo y seguridad de datos.</p>
+    <div class="testimonios">
+      <blockquote>
+        <img src="../static/img/logo.png" alt="Cliente feliz">
+        "Comprar aquí me hace sentir parte de un cambio positivo."
+      </blockquote>
+      <blockquote>
+        <img src="../static/img/logo.png" alt="Cliente satisfecho">
+        "Excelente calidad y propósito detrás de cada producto."
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+  <h2>Preguntas frecuentes</h2>
+  <div class="faq-item">
+    <details>
+      <summary>¿Cómo comprar en OWNSTYLE?</summary>
+      <p>Puedes comprar seleccionando tus productos favoritos, añadiéndolos al carrito y siguiendo el proceso de pago seguro.</p>
+    </details>
+  </div>
+  <div class="faq-item">
+    <details>
+      <summary>¿Qué impacto social tiene mi compra?</summary>
+      <p>Tu compra apoya a emprendedores locales y fomenta la moda sostenible.</p>
+    </details>
+  </div>
+  <div class="faq-item">
+    <details>
+      <summary>¿Cómo se protegen mis datos personales?</summary>
+      <p>Usamos encriptación y cumplimos con normativas de protección de datos.</p>
+    </details>
+  </div>
+  <div class="faq-item">
+    <details>
+      <summary>¿Qué hago si necesito devolver un producto?</summary>
+      <p>Puedes devolverlo dentro de los 30 días, siempre y cuando esté en buen estado, con empaques y etiquetas originales.</p>
+    </details>
+  </div>
+  <div class="faq-item">
+    <details>
+      <summary>¿Cómo funcionan las tallas inclusivas?</summary>
+      <p>Nuestros productos se adaptan a una amplia variedad de cuerpos, con guías de tallas claras.</p>
+    </details>
+  </div>
+  <div class="faq-item">
+    <details>
+      <summary>¿Hay costos de envío en Bogotá?</summary>
+      <p>El envío es gratuito en Bogotá para compras superiores a $100.000 COP.</p>
+    </details>
+  </div>
+</section>
+
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <h2>Únete a nuestra comunidad</h2>
+    <p>Recibe consejos de estilo consciente.</p>
+    <form>
+      <input type="email" placeholder="Tu correo electrónico" required>
+      <button type="submit">Suscribirme</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="#">Políticas de privacidad</a>
+      <a href="#">Términos y condiciones</a>
+      <a href="#">Devoluciones</a>
+    </div>
+    <div class="contacto">
+      <p>Contacto: info@ownstyle.com | WhatsApp: +57 300 000 0000</p>
+    </div>
+    <div class="redes">
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/1384/1384063.png" alt="Instagram"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/1384/1384053.png" alt="Facebook"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/24/1384/1384060.png" alt="TikTok"></a>
+    </div>
+  </footer>
+</body>
+</html>
+<script>
+  cargarProductos('');
+  function cargarProductos(option = "") {
+    var Template = "";
+    var cargaProductos = document.getElementById("ProductosTienda");
+    var ArrayProductos = [{
+      img: "../static/img/ecoabrigo.jpg",
+      nombre: "Producto 1",
+      precio: "80000",
+      fitro: "H"
+    },
+    {
+      img: "../static/img/vestidos.jpg",
+      nombre: "Producto 2",
+      precio: "80000",
+      fitro: "H"
+    },
+    {
+      img: "../static/img/pantalones.jpg",
+      nombre: "Producto 3",
+      precio: "80000",
+      fitro: "M"
+    },];
+
+    if(!option == "" )
+    {
+      for (var i= 0; i < ArrayProductos.length; i++) {
+        if (option == ArrayProductos[i].fitro) {
+          Template += "<div class='card'>";
+          Template += "<img src='" + ArrayProductos[i].img + "' alt='" + ArrayProductos[i].nombre + "'>"
+          Template += "<p>" + ArrayProductos[i].nombre + "</p>"
+          Template += "<p>$" + ArrayProductos[i].precio + "</p>"
+          Template += "<button class='add-to-cart' data-name='" + ArrayProductos[i].nombre + "' data-price='" + ArrayProductos[i].precio + "'>Agregar al carrito</button>"
+          Template += "</div>"
+        }
+      }
+     }
+     else
+     {
+      for (var i= 0; i < ArrayProductos.length; i++) {
+          Template += "<div class='card'>";
+          Template += "<img src='" + ArrayProductos[i].img + "' alt='" + ArrayProductos[i].nombre + "'>"
+          Template += "<p>" + ArrayProductos[i].nombre + "</p>"
+          Template += "<p>$" + ArrayProductos[i].precio + "</p>"
+          Template += "<button class='add-to-cart' data-name='" + ArrayProductos[i].nombre + "' data-price='" + ArrayProductos[i].precio + "'>Agregar al carrito</button>"
+          Template += "</div>"
+        }
+     }
+
+    cargaProductos.innerHTML = Template;
+    Template = "";
+  }
+</script>
