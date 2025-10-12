@@ -375,7 +375,7 @@ body {
   margin-bottom: 10px;
 }
 .team-cards .card img:hover {
-  transform: scale(1.08);        /* Zoom ligero */
+  transform: scale(1.00);        /* Zoom ligero */
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25); /* Efecto elegante */
 }
 
