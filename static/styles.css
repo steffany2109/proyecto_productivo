@@ -230,6 +230,8 @@ body {
   max-width: 100%;
   border-radius: 8px;
   margin-bottom: 1rem;
+  width: 300px !important;
+  height: 300px !important;
 }
 
 .pildoras {
@@ -614,4 +616,45 @@ footer {
 
 #clear-cart:hover {
   background: #218838;
+}
+
+/* Estilo para cada producto dentro del carrito */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+  padding: 6px;
+  background: #f0f4f3;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+/* Botón eliminar 🗑️ */
+.remove-item {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #a00;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.remove-item:hover {
+  transform: scale(1.2);
+  color: red;
+}
+
+.talla-select {
+  padding: 5px 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.talla-select:hover {
+  border-color: #333;
 }

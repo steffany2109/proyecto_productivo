@@ -28,12 +28,15 @@
 </div>
 
 <!-- Panel lateral del carrito -->
+
 <div id="cart-panel" class="cart-panel">
+  <button id="close-cart" class="close-cart">✖</button>
   <h3>🛍️ Tu Carrito</h3>
   <ul id="cart-items"></ul>
-  <p style="color:black;">Total: $<span id="cart-total" style="color:black;">0</span></p>
+  <p>Total: $<span id="cart-total">0</span></p>
   <button id="clear-cart">Vaciar carrito</button>
 </div>
+
 
   </nav>
 
@@ -80,9 +83,9 @@
       <button onclick="cargarProductos('')">Todos</button>
       <button onclick="cargarProductos('M')">Mujer</button>
       <button onclick="cargarProductos('H')">Hombre</button>
-      <button>Niños/Niñas</button>
-      <button>Joyería</button>
-      <button>Accesorios</button>
+      <button onclick="cargarProductos('N')">Niños/Niñas</button>
+      <button onclick="cargarProductos('J')">Joyería</button>
+      <button onclick="cargarProductos('A')">Accesorios</button>
     </div>
     <div id="ProductosTienda" class="productos-destacados">
       
@@ -127,24 +130,22 @@
     <h2>Quienes hacemos posible OWNSTYLE</h2>
     <p>Somos un equipo que cree en la moda sostenible, la diversidad y la confianza como base del consumo consciente.</p>
     <div class="team-cards">
+
       <div class="card">
         <img src='../static/img/steffany.jpeg' alt="Dirección">
-        <p>direccion
-          
-        </p>
+        <p>direccion</p>
       </div>
+
       <div class="card">
         <img src="../static/img/foto1.jpg" alt="Contenido">
         <p>Contenido</p>
       </div>
+
       <div class="card">
         <img src="../static/img/foto1.jpg" alt="Diseño">
         <p>Diseño</p>
       </div>
-      <div class="card">
-        <img src="../static/img/foto1.jpg" alt="Tecnología">
-        <p>Tecnología</p>
-      </div>
+
     </div>
   </section>
 
@@ -241,78 +242,152 @@
     var Template = "";
     var cargaProductos = document.getElementById("ProductosTienda");
     var ArrayProductos = [{
+      id:1,
       img: "../static/img/arestes.png",
-      nombre: "aretes de mariposa",
+      nombre: "aretes",
       precio: "5.000",
-      fitro: "M"
+      fitro: "JMA",
+      talla: false 
     },
     {
+      id:2,
       img: "../static/img/pantalon m.png",
-      nombre: "pantalon mujer",
+      nombre: "pantalon",
       precio: "60.000",
-      fitro: "M"
+      fitro: "M",
+      talla: true
     },
     {
+      id:3,
       img: "../static/img/pantalones cortos.png",
-      nombre: "pantalones cortos",
+      nombre: "pantaloneta",
       precio: "40.000",
-      fitro: "H"
+      fitro: "H",
+      talla: true
     },
     {
+      id:4,
       img: "../static/img/falda.png",
       nombre: "falda",
       precio: "40.000",
-      fitro: "M"
+      fitro: "M",
+      talla: true 
     },
     {
-      img: "../static/img/camisa-rosa.jpeg",
-      nombre: "camisa para mujer rosada",
+      id:5,
+      img: "../static/img/camisa-5.jpeg",
+      nombre: "camisa",
       precio: "40.000",
-      fitro: "M"
+      fitro: "M",
+      talla: true
     },
     {
+      id:6,
       img: "../static/img/camisa.jpeg",
-      nombre: "camisa para mujer",
+      nombre: "camisa",
       precio: "40.000",
-      fitro: "M"
+      fitro: "M",
+      talla: true
     },
     {
+      id:7,
       img: "../static/img/camisa-1.jpeg",
-      nombre: "camisa para mujer",
+      nombre: "camisa",
       precio: "40.000",
-      fitro: "M"
+      fitro: "M",
+      talla: true 
     },
     {
-      img: "../static/img/camisa-negra.jpeg",
-      nombre: "camisa para mujer negra",
+      id:8,
+      img: "../static/img/camisa-4.jpeg",
+      nombre: "camisa",
       precio: "40.000",
-      fitro: "M"
+      fitro: "M",
+      talla: true
     },
     {
+      id:9,
       img: "../static/img/pantaloneta.jpeg",
-      nombre: "pantaloneta para mujer",
+      nombre: "pantaloneta",
       precio: "40.000",
-      fitro: "M"
+      fitro: "M",
+      talla: true
     },
     {
-      img: "../static/img/camisa-corazon.jpeg",
-      nombre: "camisa para mujer",
+      id:10,
+      img: "../static/img/camisa-3.jpeg",
+      nombre: "camisa",
       precio: "40.000",
-      fitro: "M" 
+      fitro: "M",
+      talla: true 
     },
     {
-      
+      id:11,
+      img: "../static/img/f1.jpg",
+      nombre: "falda",
+      precio: "40.000",
+      fitro: "M",
+      talla: true 
+    },
+    {
+      id:12,
+      img: "../static/img/f2.jpeg",
+      nombre: "falda",
+      precio: "40.000",
+      fitro: "M",
+      talla: true 
+    },
+    {
+      id:13,
+      img: "../static/img/f3.jpeg",
+      nombre: "falda",
+      precio: "40.000",
+      fitro: "M",
+      talla: true 
+    },
+    {
+      id:14,
+      img: "../static/img/f4.jpeg",
+      nombre: "falda",
+      precio: "40.000",
+      fitro: "M",
+      talla: true
+    },
+    {
+      id:15,
+      img: "../static/img/f5.jpeg",
+      nombre: "falda",
+      precio: "40.000",
+      fitro: "M",
+      talla: true
+    },
+    {
+      id:16,
+      img: "../static/img/f6.jpeg",
+      nombre: "falda",
+      precio: "40.000",
+      fitro: "M",
+      talla: true
     }];
 
     if(!option == "" )
     {
       for (var i= 0; i < ArrayProductos.length; i++) {
-        if (option == ArrayProductos[i].fitro) {
+        if (ArrayProductos[i].fitro.includes(option)) {
           Template += "<div class='card'>";
-          Template += "<img src='" + ArrayProductos[i].img + "' alt='" + ArrayProductos[i].nombre + "'>"
-          Template += "<p>" + ArrayProductos[i].nombre + "</p>"
+          Template += "<img  src='" + ArrayProductos[i].img + "' alt='" + ArrayProductos[i].nombre + "'>" 
+          if(ArrayProductos[i].talla)
+          {
+            Template += "<label for='talla'>Talla:</label>";
+            Template += "<select id='talla"+ArrayProductos[i].id+"' class='talla-select'>";
+            Template += "<option value='S'>S</option>";
+            Template += "<option value='M'>M</option>";
+            Template += "<option value='L'>L</option>";
+            Template += "<option value='XL'>XL</option>";
+            Template += "</select>"
+          }
           Template += "<p>$" + ArrayProductos[i].precio + "</p>"
-          Template += "<button class='add-to-cart' data-name='" + ArrayProductos[i].nombre + "' data-price='" + ArrayProductos[i].precio + "'>Agregar al carrito</button>"
+          Template += "<button class='add-to-cart' data-id='"+ArrayProductos[i].id+"' data-name='" + ArrayProductos[i].nombre + "' data-price='" + ArrayProductos[i].precio + "'>Agregar al carrito</button>"
           Template += "</div>"
         }
       }
@@ -322,9 +397,19 @@
       for (var i= 0; i < ArrayProductos.length; i++) {
           Template += "<div class='card'>";
           Template += "<img src='" + ArrayProductos[i].img + "' alt='" + ArrayProductos[i].nombre + "'>"
-          Template += "<p>" + ArrayProductos[i].nombre + "</p>"
+          if(ArrayProductos[i].talla)
+          {
+            Template += "<label for='talla'>Talla:</label>";
+            Template += "<select id='talla"+ArrayProductos[i].id+"' class='talla-select'>";
+            Template += "<option value='S'>S</option>";
+            Template += "<option value='M'>M</option>";
+            Template += "<option value='L'>L</option>";
+            Template += "<option value='XL'>XL</option>";
+            Template += "</select>"
+          }
+          
           Template += "<p>$" + ArrayProductos[i].precio + "</p>"
-          Template += "<button class='add-to-cart' data-name='" + ArrayProductos[i].nombre + "' data-price='" + ArrayProductos[i].precio + "'>Agregar al carrito</button>"
+          Template += "<button class='add-to-cart' data-id='"+ArrayProductos[i].id+"'  data-name='" + ArrayProductos[i].nombre + "' data-price='" + ArrayProductos[i].precio + "'>Agregar al carrito</button>"
           Template += "</div>"
         }
      }
@@ -332,4 +417,4 @@
     cargaProductos.innerHTML = Template;
     Template = "";
   }
-</script>
+  </script>
