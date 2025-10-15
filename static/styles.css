@@ -96,40 +96,6 @@ body {
   display: inline-block;
 }
 
-/* PRIMARIO (amarillo) */
-.btn-primary {
-  background: #ffdd57;
-  color: #1a1a1a;
-}
-
-.btn-primary:hover {
-  background: #ffc107;
-}
-
-
-/* SECUNDARIO (verde) */
-.btn-secondary {
-  background: #28a745;
-  color: white;
-}
-
-.btn-secondary:hover {
-  background: #218838;
-}
-
-/* TERCIARIO (blanco sólido) */
-.btn-tertiary {
-  background: #ffffff;
-  color: #1a1a1a;           /* texto negro */
-  border: 2px solid #ffffff;
-}
-
-.btn-tertiary:hover {
-  background: #f4f4f4;      /* gris suave */
-  border-color: #ddd;
-  color: #000;
-}
-
 /* ========= PROPUESTA DE VALOR ========= */
 /* Sección Propuesta de Valor */
 .propuesta-valor {
